@@ -8,6 +8,7 @@ Copyright Renj
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/AlecAivazis/survey/v2"
@@ -27,8 +28,8 @@ func exit(err error) {
 }
 
 func main() {
-	log.Printf("👻 Thanks for using %s to create application of projectJJ", internal.APP_NAME)
-	log.Printf("🐼 Copyright: %s\n🔗 Go to site: http://%s\n📧 Email: %s\n",
+	fmt.Printf("👻 Thanks for using %s to create application of projectJJ", internal.APP_NAME)
+	fmt.Printf("🐼 Copyright: %s\n🔗 Go to site: http://%s\n📧 Email: %s\n",
 		internal.COPYRIGHT,
 		internal.SITE,
 		internal.MAIL,
