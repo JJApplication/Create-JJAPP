@@ -28,8 +28,8 @@ func exit(err error) {
 }
 
 func main() {
-	fmt.Printf("👻 Thanks for using %s to create application of projectJJ", internal.APP_NAME)
-	fmt.Printf("🐼 Copyright: %s\n🔗 Go to site: http://%s\n📧 Email: %s\n",
+	fmt.Printf("👻 Thanks for using %s to create application of projectJJ\n", internal.APP_NAME)
+	fmt.Printf("🐼 Copyright: %s\n🔗 Go to site: http://%s\n📧 Email: %s\n\n",
 		internal.COPYRIGHT,
 		internal.SITE,
 		internal.MAIL,
@@ -72,6 +72,7 @@ func main() {
 	startTodo := true
 	promptStart := &survey.Confirm{
 		Message: "Do you like to create the project right now?",
+		Default: true,
 	}
 	exit(survey.AskOne(promptStart, &startTodo))
 	if startTodo {
