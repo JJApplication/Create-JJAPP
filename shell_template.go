@@ -16,7 +16,7 @@ var shellTemplates = []string{"start.sh", "stop.sh", "check.sh", "restart.sh", "
 func createShell() error {
 	log.Println("start to create project scripts")
 	for _, s := range shellTemplates {
-		data := "# !/bin/bash"
+		data := "#!/usr/bin/env bash"
 		log.Printf("create script %s", s)
 		if err := ioutil.WriteFile(s, []byte(data), 0755); err != nil {
 			return err
